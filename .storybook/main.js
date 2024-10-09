@@ -1,10 +1,10 @@
 /** @type { import('@storybook/vue3-vite').StorybookConfig } */
 const config = {
   stories: [
-    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/**/*.stories.js",
   ],
+  staticDirs: ['../public'],
   addons: [
-    "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
@@ -13,6 +13,9 @@ const config = {
   framework: {
     name: "@storybook/vue3-vite",
     options: {},
+  },
+  core: {
+    disableTelemetry: true,
   },
 };
 export default config;
