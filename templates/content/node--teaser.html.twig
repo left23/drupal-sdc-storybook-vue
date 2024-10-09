@@ -1,9 +1,22 @@
-{{ include('emc:title', {
+{# {{ include('emc:title', {
     text: label,
     level: 3
   }, with_context = false)
 }}
 
+{{ include('emc:title', {
+    text: label,
+    level: 4
+  })
+}} #}
 
-{{ content }}
+{# {{ content }} #}
 
+
+
+{{ include('emc:card', {
+    text: content,
+    level: 4,
+    title: label,
+  })
+}}

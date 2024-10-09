@@ -1,5 +1,5 @@
 <template>
-  <h2>Title here</h2>
+  <h2 :level="title.level" :id="title.id" :class="title.modifier">{{ title.text }}</h2>
 </template>
 
 <script>
@@ -8,12 +8,12 @@
 // import data from './title.yml';
 
 export default {
-  name: 'title',
+  name: 'Title',
   props: {
-    level: {
-      type: Number,
-      default: 1,
+    title: {
+      type: Object,
       required: true,
+      default: () => ({ id: '', modifier: '', level: '2', text: '' })
     },
   }
 };
